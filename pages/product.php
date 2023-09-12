@@ -13,7 +13,7 @@ $result = $product->get_product_by_id($product_id)[0];
 
 
     <article>
-        <img class="product-page__photo" src="<?= "../../../public/Assets/" . $result['photo'] ?>" alt="">
+        <img class="product-page__photo" src="<?= "../downloads/" . $result['photo'] ?>" alt="">
         <div class="short_descriptiion">
             <h2 class="product_page__brand">
                 <?= ucfirst($result['type']) ?> :

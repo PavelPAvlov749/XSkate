@@ -93,7 +93,7 @@ $products = $product_model->products;
 
                     <div class="card">
                         <a href="./product?id=<?= $item['id'] ?>" class="card_link">
-                            <img class="card__product-photo" src="<?= "../../../public/Assets/" . $item['photo'] ?>" alt="">
+                            <img class="card__product-photo" src="<?= "../downloads/" . $item['photo'] ?>" alt="">
                             <h2>
                                 <?= ucfirst($item['type']) . " " . $item['brand'] . " : " . $item['model'] ?>
                                 <img id="icon" src="./assets/icons/unliked.png" alt="">

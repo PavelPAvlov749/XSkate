@@ -10,14 +10,14 @@ $adress = $_POST['adress'];
 
 $auth = new AuthModel();
 
-$user = $auth->create_user($password,$login,$adress,$email);
+$user = $auth->create_user($password,$login,$email);
 
-if($user) {
+if(gettype($user) == 'array') {
     $_SESSION['user_id'] = $user['id'];
     header('location:/');
 }
 else {
-    $_SESSION['error-message'] = "ERROR : Cant`create user";
+    $_SESSION['error-message'] = "ERROR : " . $user;
     header('location:/register');
 
 }

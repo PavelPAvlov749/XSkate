@@ -17,7 +17,9 @@ class Router
         '/auth-register' => './controllers/RegisterController.php',
         '/logout' => "./controllers/LogoutController.php",
         '/profile' => './pages/Profile.php',
-        '/skates' => './pages/skates.php'
+        '/skates' => './pages/skates.php',
+        '/add-product' => './controllers/AddProduct.php',
+        '/add_product' => './pages/AddProduct.php'
     ];
 
     public function __construct()

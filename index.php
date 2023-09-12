@@ -2,7 +2,17 @@
 session_start();
 use models\Model;
 use models\ProductModel;
+ini_set("display_errors", 0);
 
+error_reporting(E_ALL);
+
+function debug($str): string
+{
+    echo "<pre>";
+    var_dump($str);
+    echo "</pre>";
+    exit;
+}
 
 require_once("./router/router.php");
 
@@ -32,9 +42,11 @@ $product = new ProductModel();
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./public/Scripts/Swiper.js" defer></script>
     <!-- STYLES IMPORT  -->
+    <link rel="stylesheet" href="./public/Styles/Profile.css">
     <link rel="stylesheet" href="./public/Styles/ProductPage.css">
     <link rel="stylesheet" href="./public/Styles/index.css">
     <link rel="stylesheet" href="./public/Styles/registration.css">
+    <link rel="stylesheet" href="./public/Styles/AddProduct.css">
 </head>
 
 <body>

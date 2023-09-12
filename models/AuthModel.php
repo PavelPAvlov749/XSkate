@@ -55,7 +55,7 @@ class AuthModel extends Model
     {
         try {
             $md5Pass = md5($password);
-            $query = $this->db->prepare("SELECT * FROM `Users` WHERE `login` = :login AND `password` = :password");
+            $query = $this->db->prepare("SELECT * FROM `users` WHERE `login` = :login AND `password` = :password");
             $query->execute([':login' => $login, ':password' => $md5Pass]);
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
 
@@ -77,29 +77,27 @@ class AuthModel extends Model
      * @param string $user_name
      * @param string $password
      * @param string $login
-     * @param string $address
      */
-    public function create_user(string $password, string $login, string $address,string $email) : array | bool
+    public function create_user(string $password, string $login,string $email) : array | string
     {
         try {
             $encrypted_password = md5($password);
-            $user_address = strlen($address) > 1 ? $address : null;
-            $query = $this->db->prepare("INSERT INTO `Users` (`id`,`password`,`login`,`adress`,`email`)
-                    VALUES (NULL,:encrypted_password, :login, :user_address, :email)");
+            
+            $user_query = $this->db->prepare("INSERT INTO `users` (`id`,`password`,`login`,`email`)
+                    VALUES (NULL,:encrypted_password, :login, :email)");
 
-            $query->execute([
+            $user_query->execute([
                 ':encrypted_password' => $encrypted_password,
                 ':login' => $login,
-                ':user_address' => $user_address,
                 ':email' => $email
             ]);
-            $user = $query->fetchAll(PDO::FETCH_ASSOC);
+            $user = $user_query->fetchAll(PDO::FETCH_ASSOC);
             return $user;
 
 
         } catch (PDOException $ex) {
             echo "ERROR : " . $ex->getMessage();
-            return false;
+            return $ex->getMessage();
             
         }
     }
@@ -115,9 +113,9 @@ class AuthModel extends Model
      * @return bool
      * 
      */
-    private function validate (string $login,string $password,string $repeat_password,string $email) : bool {
+    // private function validate (string $login,string $password,string $repeat_password,string $email) : bool {
         
-    }
+    // }
 }
 
 

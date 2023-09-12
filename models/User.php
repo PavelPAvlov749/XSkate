@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace models;
 
 use models\Model;
+use PDOException;
+use PDO;
 
 
 // The User class represents a User with basic attributes like first name, last name, username, and email
@@ -24,12 +26,12 @@ class User extends Model
      * @param string $login
      * @param string $address
      */
-    public function __construct(string $login, string $address, string $email, $role)
+    public function __construct(string $login, ?string $address, string $email)
     {
         parent::__construct();
         $this->login = $login;
         $this->email = $email;
-        $this->role = $role;
+
     }
 
     // Getters for private properties
@@ -55,6 +57,59 @@ class User extends Model
             echo "Invalid email address." . PHP_EOL;
         }
     }
+
+
+    /**
+     * GET USER`S DELIVERY ADRESS
+     * @param int $user_id
+     * 
+     * @return array | null
+     * 
+     */
+    public function get_user_adress (int $user_id) : array | null {
+        try {
+            $query = $this->db->prepare("SELECT * FROM `adresses` WHERE `user_id` = '$user_id'");
+            $query->execute();
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+            if($result) {
+                return $result;
+            }
+            else 
+            {
+                return null;
+            }
+        }   
+        catch(PDOException $ex)
+        {
+            $_SESSION['error-message'] = "Unexpected DB error Can`t get user adress";
+            return null;
+        }
+    }
+    /**
+     * SET USERS DELIVERY ADRESS
+     * @param string $country
+     * @param string $city
+     * @param string $street
+     * @param string $building
+     * @param int $user_id
+     * 
+     * @return bool 
+     */
+
+     public function set_user_adress ($country,$city,$street,$building,$user_id) : bool {
+        try {
+            $this->db->prepare("INSERT INTO `adresses` (:country,:city,:street,:building,:user_id)");
+            // $this->db->execute([
+                // "" => ""
+            // ]);
+        }
+        catch (PDOException $ex)
+        {
+            $_SESSION['error-message'] = 'ERROR : DB error';
+            return false;
+        }
+
+     }
 }
 
 
