@@ -20,28 +20,20 @@ $result = $product->get_product_by_id($product_id)[0];
                 <?= ucfirst($result['brand']) ?>
                 <?= ucfirst($result['model']) ?>
             </h2>
-
             <h2 class="product_page__price">
                 Price :
                 <?= $result['price'] ?> RUB
-
             </h2>
             <div class="product-page__buttons">
-                <a href="" class="buy_btn">Add to cart</a>
-
+                <button href="./add_tocart?id=<?= $result ?>" class="buy_btn">Add to cart</button>
                 <img class="icon" src="../public/Assets/Icons/unliked.png" alt="">
-
             </div>
             <h2>Description</h2>
             <p>
-            <?= $result['description'] ?>
+                <?= $result['description'] ?>
 
             </p>
-         
-            <!-- 
-    <p>
-        
-    </p> -->
+
         </div>
 
     </article>

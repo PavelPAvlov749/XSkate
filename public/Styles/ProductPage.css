@@ -64,11 +64,51 @@ h2 {
 p {
     font-family: Roboto;
 }
-
+tr {
+    border: 1px solid #14413d;
+}
 .icon {
     width: 30px;
     height: 30px;
     /* background-color: rgb(143, 137, 137); */
     padding: 5px;
     border: 1px solid #14413d;
+}
+
+.cart__preview{
+    width: 120px;
+    height: 120px;
+}
+.cart_list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart_list__cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.skates {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cart__preview--small {
+    width: 60px;
+    height: 60px;
+}
+.skates__list__item{
+    width: 20%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.skates__list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.skates__tittle {
+    text-align: center;
+    font-size: 30px;
 }

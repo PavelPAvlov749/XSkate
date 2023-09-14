@@ -17,9 +17,14 @@ class Router
         '/auth-register' => './controllers/RegisterController.php',
         '/logout' => "./controllers/LogoutController.php",
         '/profile' => './pages/Profile.php',
-        '/skates' => './pages/skates.php',
         '/add-product' => './controllers/AddProduct.php',
-        '/add_product' => './pages/AddProduct.php'
+        '/add_product' => './pages/AddProduct.php',
+        '/add-adress' => './pages/AddAdress.php',
+        '/addToCart' => './controllers/addToCartController.php',
+        '/cart' => './pages/Cart.php',
+        '/clear_cart' => './controllers/ClearCartController.php',
+        "/order" => "./pages/Order.php",
+        "/skates" => "./pages/Skates.php"
     ];
 
     public function __construct()

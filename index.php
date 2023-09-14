@@ -42,6 +42,7 @@ $product = new ProductModel();
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./public/Scripts/Swiper.js" defer></script>
     <!-- STYLES IMPORT  -->
+    <link rel="stylesheet" href="./public/Styles/Cart.css">
     <link rel="stylesheet" href="./public/Styles/Profile.css">
     <link rel="stylesheet" href="./public/Styles/ProductPage.css">
     <link rel="stylesheet" href="./public/Styles/index.css">
@@ -54,7 +55,9 @@ $product = new ProductModel();
 
 
     $router = new Router();
-
+    if(!$_SESSION['cart']){
+        $_SESSION['cart'] = "";
+    } 
 
     include('./pages/templates/header.php');
     $router->route();

@@ -67,43 +67,49 @@ $products = $product_model->products;
         </div>
     </section>
     <section class="products">
-        <section class="products_controls">
-            <h1>Novelties</h1>
-            <section class="products__controls">
-                <span>Sort by :
-                    <select name="sort-by" id="">
-                        <option value="Date">Date</option>
-                        <option value="Proce">Date</option>
-
-                    </select>
-                </span>
-                <span>Type :
-                    <select name="type" id="">
-                        <option value="Skates">Skates</option>
-                        <option value="Frames">Frames</option>
-                        <option value="Wheels">Wheels</option>
-                        <option value="Bearings">Bearings</option>
-                    </select>
-                </span>
-            </section>
-            <section class="products__list">
-                <?php
-                foreach ($products as $item) {
-                    ?>
-
-                    <div class="card">
-                        <a href="./product?id=<?= $item['id'] ?>" class="card_link">
-                            <img class="card__product-photo" src="<?= "../downloads/" . $item['photo'] ?>" alt="">
-                            <h2>
-                                <?= ucfirst($item['type']) . " " . $item['brand'] . " : " . $item['model'] ?>
-                                <img id="icon" src="./assets/icons/unliked.png" alt="">
-                            </h2>
-
-                            <button class="card__add_to_card_button">Add to card</button>
-                        </a>
-                    </div>
-
-                <?php } ?>
-
-            </section>
+    <section class="products_controls">
+        <h1>Novelties</h1>
+        <section class="products__controls">
+            <!-- Сортировка по дате или цене -->
+            <span>Sort by :
+                <select name="sort-by" id="">
+                    <option value="Date">Date</option>
+                    <option value="Price">Price</option> <!-- Исправлена опечатка в значении -->
+                </select>
+            </span>
+            <!-- Фильтр по типу товаров -->
+            <span>Type :
+                <select name="type" id="">
+                    <option value="Skates">Skates</option>
+                    <option value="Frames">Frames</option>
+                    <option value="Wheels">Wheels</option>
+                    <option value="Bearings">Bearings</option>
+                </select>
+            </span>
         </section>
+        <section class="products__list">
+            <?php
+            foreach ($products as $item) {
+                ?>
+
+                <div class="card">
+                    <!-- Ссылка на страницу товара -->
+                    <a href="./product?id=<?= $item['id'] ?>" class="card_link">
+                        <!-- Изображение товара -->
+                        <img class="card__product-photo" src="<?= "../downloads/" . $item['photo'] ?>" alt="">
+                        <h2>
+                            <!-- Название товара -->
+                            <?= ucfirst($item['type']) . " " . $item['brand'] . " : " . $item['model'] ?>
+                            <!-- Иконка для отображения состояния "не в избранном" -->
+                            <img id="icon" src="./assets/icons/unliked.png" alt="">
+                        </h2>
+                        <!-- Ссылка для добавления товара в корзину -->
+                      
+                    </a>
+                    <button onclick="addToCart(<?=$item['id']?>)" class="card__add_to_cart_button">Add to cart</button>
+                </div>
+
+            <?php } ?>
+        </section>
+    </section>
+</section>

@@ -19,3 +19,24 @@ function switchVisibility() {
         passwordToggleButton.textContent = 'Show';
     }
 }
+
+
+let products = JSON.parse(localStorage.getItem('products'));
+
+// let cartItem = document.querySelector("#header__cart");
+// const counter = document.createElement("span");
+// counter.innerText = products?.length;
+// counter.className = 'counter';
+// cartItem.appendChild(counter);
+
+cartItem.addEventListener("click", (e) => {
+    e.preventDefault();
+    location.replace("/cart");
+  
+})
+
+
+
+function addToCart(id) {
+    location.replace("/addToCart?product_id=" + id);
+} 
