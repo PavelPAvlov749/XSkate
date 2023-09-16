@@ -15,25 +15,28 @@
     max-width: 1200px;
     width: 100%;
     gap: 30px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .short_descriptiion {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
 }
 
 h2 {
     font-family: Neue;
-    margin: 10px 0;
-    white-space: nowrap;
-    overflow: hidden;
+    margin: 0px 0;
+    /* white-space: nowrap;
+    overflow: hidden; */
 }
 
 .product-page__photo {
-    width: 560px;
-    height: 560px;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    min-width: 280px;
     object-fit: cover;
 }
 
@@ -89,26 +92,10 @@ tr {
     flex-direction: row;
     align-items: center;
 }
-.skates {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.cart__preview--small {
-    width: 60px;
-    height: 60px;
-}
-.skates__list__item{
-    width: 20%;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-.skates__list {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-.skates__tittle {
-    text-align: center;
-    font-size: 30px;
+
+
+@media (max-width:593px) {
+    .product-page article {
+        flex-direction: column;
+    }
 }

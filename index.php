@@ -42,6 +42,7 @@ $product = new ProductModel();
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./public/Scripts/Swiper.js" defer></script>
     <!-- STYLES IMPORT  -->
+    <link rel="stylesheet" href="./public/Styles/Skates.css">
     <link rel="stylesheet" href="./public/Styles/Cart.css">
     <link rel="stylesheet" href="./public/Styles/Profile.css">
     <link rel="stylesheet" href="./public/Styles/ProductPage.css">

@@ -182,7 +182,6 @@ class ProductModel extends Model
 
                 return $cart;
             } else {
-                var_dump($cart);
                 return [];
             }
         } catch (PDOException $ex) {
@@ -230,7 +229,33 @@ class ProductModel extends Model
             return false;
         }
      }
-
+     /**
+      * Filer product by Brand
+      *@param string $brands
+      *@param string $type
+      *@return array | bool
+      */
+      public function get_product_by_brand (string $brand,string $type) : array | bool {
+        try
+        {   
+            $query = $this->db->prepare("SELECT * FROM `products` WHERE `brand` = '$brand' AND `type_id` = '$type'");
+            $query->execute();
+            $products = $query->fetchAll(PDO::FETCH_ASSOC);
+            if($products)
+            {
+                return $products;
+            }
+            else
+            {
+                return [];
+            }
+        }
+        catch (PDOException $ex)
+        {
+            $_SESSION['error-kmessage'] = $ex->getMessage();
+            return false;
+        }
+      }
 
 }
 

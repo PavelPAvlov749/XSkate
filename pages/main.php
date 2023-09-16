@@ -21,7 +21,7 @@ $products = $product_model->products;
                             <h1>
                                 Mesmer: Marc Moreno - Flashback
                             </h1>
-                            <p>
+                            <p class="slide__description">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Quaerat veniam maiores, nam ducimus iure nostrum dolorum optio
                                 aperiam rem eum minima inventore reiciendis excepturi
@@ -41,7 +41,7 @@ $products = $product_model->products;
                             <h1>
                                 Istanbul Tour 2015 - Teaser - USD Skates
                             </h1>
-                            <p>
+                            <p class="slide__description">
                                 Istanbul Tour 2015 - Teaser - USD Skates - Small tease for our main blade blockbuster, a
                                 close to 10
                                 minutes monster of the Istanbul Tour.
@@ -87,7 +87,9 @@ $products = $product_model->products;
                 </select>
             </span>
         </section>
-        <section class="products__list">
+      
+    </section>
+    <section class="products__list">
             <?php
             foreach ($products as $item) {
                 ?>
@@ -101,7 +103,9 @@ $products = $product_model->products;
                             <!-- Название товара -->
                             <?= ucfirst($item['type']) . " " . $item['brand'] . " : " . $item['model'] ?>
                             <!-- Иконка для отображения состояния "не в избранном" -->
-                            <img id="icon" src="./assets/icons/unliked.png" alt="">
+                        </h2>
+                        <h2>
+                            <!-- $<?=$item['price']?> -->
                         </h2>
                         <!-- Ссылка для добавления товара в корзину -->
                       
@@ -111,5 +115,5 @@ $products = $product_model->products;
 
             <?php } ?>
         </section>
-    </section>
 </section>
+

@@ -7,6 +7,7 @@
             <option value="1">Skates</option>
             <option value="2">Frames</option>
             <option value="3">Bearings</option>
+            <option value="4">Wheels</option>
         </select>
         <input type="text" placeholder="Description" name="description">
         <input type="number" id="" placeholder="Price" name="price" required>

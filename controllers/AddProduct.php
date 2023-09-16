@@ -22,7 +22,7 @@ if (move_uploaded_file($_FILES['photo']['tmp_name'], $path)) {
     // Добавление продукта в модель с использованием данных из $_POST
     $result = $product_model->add_product(
         $_POST['model'],
-        $_POST['model'],
+        $_POST['brand'],
         $_POST['description'],
         $_POST['price'],
         $_POST['type'],
