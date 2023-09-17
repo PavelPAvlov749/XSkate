@@ -8,8 +8,8 @@ if ($_SESSION['user_id']) {
 ?>
 
 
-<form class="form" action="/auth" method="post">
-    <h1>Login</h1>
+<form class="login-form" action="/auth" method="post">
+    <h1 id="login-form__tittle">Login</h1>
     <input class="login-form__input" type="text" name="login" required placeholder="Login">
     <div class="password-input-container">
         <input class="login-form__input" type="password" name="password" id="password" required placeholder="Password">

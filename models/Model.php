@@ -5,9 +5,9 @@ use PDO;
 use PDOException;
 class Model {
     private string $hostname = "localhost";
-    private string $login = "phpmyadmin";
-    private string $db_password = "34rty7q43";
-    private string $db_name = "Users";
+    private string $login = "root";
+    private string $db_password = "zPJ39FswVnwdNKBX";
+    private string $db_name = "XSkate";
     
     protected PDO $db;
 

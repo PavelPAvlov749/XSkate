@@ -1,0 +1,29 @@
+.login-form {
+    padding: 10px;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10% auto ;
+    border: 1px solid rgb(26, 26, 26);
+    border-radius: 3px;
+    text-align: center;
+}
+#login-form__tittle{
+    font-size: 30px;
+}
+.password-input-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#show_password {
+    width: 60px;
+    font-family: Roboto;
+    font-size: 15px;
+    padding: 0% 10px;
+    text-align: center;
+    margin-left: 5px;
+    background-color: rgb(161, 52, 52);border-radius: 5px;
+}

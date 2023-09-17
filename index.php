@@ -35,6 +35,7 @@ spl_autoload_register(function ($class_name) {
     <link rel="stylesheet" href="./public/Styles/ProductPage.css">
     <link rel="stylesheet" href="./public/Styles/burger.css">
     <link rel="stylesheet" href="./public/Styles/Cart.css">
+    <link rel="stylesheet" href="./public/Styles/Login.css">
 </head>
 
 <body>
