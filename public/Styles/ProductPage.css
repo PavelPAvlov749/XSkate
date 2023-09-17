@@ -1,101 +1,53 @@
 .product-page {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    margin: 2rem auto;
-    gap: 50px;
-    align-items: center;
-
-}
-
-.product-page article {
+    padding: 50px 20px;
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
+}
+.product-page__photo{
+    max-width: 450px;
+    max-height: 450px;
     width: 100%;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.short_descriptiion {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-}
-
-h2 {
-    font-family: Neue;
-    margin: 0px 0;
-    /* white-space: nowrap;
-    overflow: hidden; */
-}
-
-.product-page__photo {
-    width: 100%;
-    max-width: 560px;
     height: auto;
-    min-width: 280px;
     object-fit: cover;
 }
-
-.product-page__buttons {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-
-}
-
-.buy_btn {
-    display: flex;
-    font-family: Neue;
-    font-size: 20px;
-    height: 2.5rem;
-    background-color: rgb(34, 34, 34);
-    padding: 0px 10px;
-    border: 1px solid #14413d;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-}
-
-p {
-    font-family: Roboto;
-}
-tr {
-    border: 1px solid #14413d;
-}
-.icon {
-    width: 30px;
-    height: 30px;
-    /* background-color: rgb(143, 137, 137); */
-    padding: 5px;
-    border: 1px solid #14413d;
-}
-
-.cart__preview{
-    width: 120px;
-    height: 120px;
-}
-.cart_list{
+.short_description {
+    width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
-.cart_list__cart{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.product_page__full-name,
+.product-page__price,
+.product-page__buttons
+{
+    font-size: 25px;
+}
+.product-page__description-tittle {
+    font-size: 25px;
 }
 
+.product-page__buy_btn{
+    font-size: 20px;
+    padding: 7px 20px;
+    border: 1px solid rgb(8, 54, 29);
+}
+.product-page__buy_btn:hover {
+    background-color: rgb(7, 23, 14);
+    transition: all 0.6s ease;
+}
 
-@media (max-width:593px) {
-    .product-page article {
+@media(max-width:802px) {
+    .product-page {
         flex-direction: column;
+    }
+    .product-page__description-tittle {
+        margin-top: 20px;
+    }
+    .short_description {
+        
+        width: 100%;
+    }
+    .product-page {
+        
     }
 }

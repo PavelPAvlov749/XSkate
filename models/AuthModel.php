@@ -102,20 +102,7 @@ class AuthModel extends Model
         }
     }
 
-    /**
-     * Validate register form data
-     * 
-     * @param string $login
-     * @param string $password
-     * @param string $repeat_password
-     * @param string $email
-     * 
-     * @return bool
-     * 
-     */
-    // private function validate (string $login,string $password,string $repeat_password,string $email) : bool {
-        
-    // }
+
 }
 
 

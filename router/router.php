@@ -24,9 +24,10 @@ class Router
         '/cart' => './pages/Cart.php',
         '/clear_cart' => './controllers/ClearCartController.php',
         "/order" => "./pages/Order.php",
-        "/skates" => "./pages/Skates.php",
+        "/skates" => "./pages/Product.php",
         '/filer_product' => './controllers/FilerProducts.php',
-        '/Frames' => './pages/Frames.php'
+        '/frames' => './pages/Product.php',
+        '/wheels' => './pages/Product.php'
     ];
 
     public function __construct()

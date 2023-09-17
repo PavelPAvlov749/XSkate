@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: spa; */
+}
+
+/* HEADER  */
+.header {
+    padding: 5px 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 15px 40px -15px #1f6c64;
+}
+
+.header-nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+@media (max-width: 802px) {
+    .header-nav__list { 
+        background-color: red;
+        display: none;
+    }
+
+
+}

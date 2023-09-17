@@ -96,20 +96,6 @@ class User extends Model
      * @return bool 
      */
 
-     public function set_user_adress ($country,$city,$street,$building,$user_id) : bool {
-        try {
-            $this->db->prepare("INSERT INTO `adresses` (:country,:city,:street,:building,:user_id)");
-            // $this->db->execute([
-                // "" => ""
-            // ]);
-        }
-        catch (PDOException $ex)
-        {
-            $_SESSION['error-message'] = 'ERROR : DB error';
-            return false;
-        }
-
-     }
 }
 
 

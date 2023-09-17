@@ -11,6 +11,7 @@ class Model {
     
     protected PDO $db;
 
+
     public function __construct() {
         try {
             $this->db = new PDO(

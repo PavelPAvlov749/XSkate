@@ -11,14 +11,14 @@ $products = $product_model->products;
 
 ?>
 <section>
-    <section class="news container">
+    <section class="news ">
         <!-- SWIPER SECTION -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slide">
                         <div class="article">
-                            <h1>
+                            <h1 class="slide__tittle">
                                 Mesmer: Marc Moreno - Flashback
                             </h1>
                             <p class="slide__description">
@@ -38,7 +38,7 @@ $products = $product_model->products;
                 <div class="swiper-slide">
                     <div class="slide">
                         <div class="article">
-                            <h1>
+                            <h1 class="slide__tittle">
                                 Istanbul Tour 2015 - Teaser - USD Skates
                             </h1>
                             <p class="slide__description">
@@ -66,10 +66,10 @@ $products = $product_model->products;
             <div class="swiper-button-prev"></div>
         </div>
     </section>
-    <section class="products">
-    <section class="products_controls">
-        <h1>Novelties</h1>
-        <section class="products__controls">
+    <section class="products container">
+    <section class="products_controls ">
+        <h1 class="produts__tittle">Novelties</h1>
+        <section class="product__filter-form">
             <!-- Сортировка по дате или цене -->
             <span>Sort by :
                 <select name="sort-by" id="">
@@ -89,31 +89,31 @@ $products = $product_model->products;
         </section>
       
     </section>
-    <section class="products__list">
+    <ul class="products__list">
             <?php
             foreach ($products as $item) {
                 ?>
 
-                <div class="card">
+                <li class="products__list__item">
                     <!-- Ссылка на страницу товара -->
                     <a href="./product?id=<?= $item['id'] ?>" class="card_link">
                         <!-- Изображение товара -->
-                        <img class="card__product-photo" src="<?= "../downloads/" . $item['photo'] ?>" alt="">
-                        <h2>
+                        <img class="product-list__item__photo" src="<?= "../downloads/" . $item['photo'] ?>" alt="">
+                        <h2 class="product-list__item__name">
                             <!-- Название товара -->
                             <?= ucfirst($item['type']) . " " . $item['brand'] . " : " . $item['model'] ?>
                             <!-- Иконка для отображения состояния "не в избранном" -->
                         </h2>
-                        <h2>
+                        <h2 class="product-list__item__price">
                             <!-- $<?=$item['price']?> -->
                         </h2>
                         <!-- Ссылка для добавления товара в корзину -->
                       
                     </a>
-                    <button onclick="addToCart(<?=$item['id']?>)" class="card__add_to_cart_button">Add to cart</button>
-                </div>
+                    <button onclick="addToCart(<?=$item['id']?>)" class="product-list__item__add-to-cart">Add to cart</button>
+            </li>
 
             <?php } ?>
-        </section>
+            </ul>
 </section>
 
