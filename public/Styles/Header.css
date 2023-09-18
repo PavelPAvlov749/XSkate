@@ -26,6 +26,8 @@
         background-color: red;
         display: none;
     }
-
+    .header {
+        padding: 0 10px;
+    }
 
 }

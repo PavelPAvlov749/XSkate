@@ -69,8 +69,13 @@
     }
     .slide__tittle {
         text-align: center;
+        word-break:keep-all;
+        overflow:hidden;
     }
     .slide__description {
         display: none;
+    }
+    .slide {
+        padding: 0;
     }
 }

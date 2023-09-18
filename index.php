@@ -36,6 +36,7 @@ spl_autoload_register(function ($class_name) {
     <link rel="stylesheet" href="./public/Styles/burger.css">
     <link rel="stylesheet" href="./public/Styles/Cart.css">
     <link rel="stylesheet" href="./public/Styles/Login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>

@@ -69,3 +69,8 @@ input {
 
 
 
+@media (max-width:802px) {
+    .container {
+        padding: 0 5px;
+    }
+}
