@@ -3,7 +3,7 @@
         <th>Image</th>
         <th>Model</th>
         <th>Brand</th>
-        <th>Proice</th>
+        <th>Price</th>
     </tr>
     <tr>
         <?php

@@ -60,6 +60,11 @@ input {
     border: 1px solid rgb(8, 54, 29);
 }
 
+button:hover {
+    background-color: rgb(40, 96, 52);
+    transition: all 0.6s ease;
+}
+
 .logo {
     width: 120px;
     height: 70px;

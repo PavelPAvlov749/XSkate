@@ -7,8 +7,11 @@
     grid-gap: 10px;
 }
 
-.product-list__item__name {}
-
+.products__list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .product-list__item__photo {
     max-width: 300px;
     max-height: 300px;

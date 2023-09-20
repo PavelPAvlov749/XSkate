@@ -19,8 +19,10 @@
 }
 td,th,table {
     height: 70px;
-    border-left: 1px solid #14413d;
+    border: 1px solid #14413d;
     border-collapse: collapse;
+    color:rgb(220, 217, 217);
+    font-family: Roboto;
 }
 
 .cart__controls {
